@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiiiii!!!</title>
+    <style>
+        body {
+            font-family: Comic "Comic Sans MS", cursive, sans-serif;
+			text-align: center;
+            margin: 0;
+            padding: 0;
+            margin: 0;
+            padding: 0;
+            background-image: url('img/Fondo.jpg'); /* URL de la imagen de fondo */
+            background-size: cover; /* Cubre todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* No repite la imagen */
+            background-color: #E2EAF4;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 24px;
+            color: #333;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #CC6CE7;
+            color: #E2EAF4;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <img id="image" src="img/Frase.jpeg" alt="Imagen">
+    <p id="phrase">Te amo pollito <3</p>
+    <div>
+        <button onclick="changeContent(0)">Picame</button>
+        <button onclick="changeContent(1)">Y a mi</button>
+        <button onclick="changeContent(2)">Ahora a mi</button>
+    </div>
+</div>
+
+<script>
+    const images = [
+        "img/Yo.jpeg",
+        "img/Corazon.jpeg",
+        "img/Nosotras.jpeg"
+    ];
+
+    const phrases = [
+        "Es un paso adelante",
+        "Y no te voy a dejar",
+        "En las buenas, las malas y las peores"
+    ];
+
+    function changeContent(index) {
+        document.getElementById("image").src = images[index];
+        document.getElementById("phrase").innerText = phrases[index];
+    }
+</script>
+
+</body>
+</html>
